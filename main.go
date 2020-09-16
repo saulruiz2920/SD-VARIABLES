@@ -4,13 +4,14 @@ import "fmt"
 import "math"
 
 func main() {
-  getSquareArea()
-  getTriangleArea()
-  getCircleArea()
+  squareArea()
+  triangleArea()
+  circleArea()
+  fahrenheitToCelcius()
 }
 
-func getSquareArea() {
-  fmt.Println("SQUARE")
+func squareArea() {
+  fmt.Println("\nSQUARE")
   var side float64
   fmt.Print("Enter value to calculate Square area: ")
   fmt.Scanf("%g", &side)
@@ -18,8 +19,8 @@ func getSquareArea() {
   fmt.Println("AREA = ", res)
 }
 
-func getTriangleArea() {
-  fmt.Println("TRIANGLE")
+func triangleArea() {
+  fmt.Println("\nTRIANGLE")
   var b float32
   var h float32
   fmt.Print("Enter base: ")
@@ -30,11 +31,20 @@ func getTriangleArea() {
   fmt.Println("AREA = ", res)
 }
 
-func getCircleArea() {
-  fmt.Println("CIRCLE")
+func circleArea() {
+  fmt.Println("\nCIRCLE")
   var r float64
   fmt.Print("Enter radius: ")
-  fmt.Scanf("%g", &r)
+  fmt.Scan(&r)
   res := math.Pi * math.Pow(r, 2)
   fmt.Println("AREA = ", res)
+}
+
+func fahrenheitToCelcius() {
+  fmt.Println("\nFahrengeit to Celcius")
+  var fahrenheit float32
+  fmt.Print("Enter fahrenheit: ")
+  fmt.Scan(&fahrenheit)
+  celcius := (fahrenheit - 32) * 5/9
+  fmt.Println("Celcius = ", celcius)
 }
